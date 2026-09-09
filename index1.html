@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+  CSE-2340 | Week 1, Class 3 | Demonstration snippets
+  Md Sadman Hafiz, Lecturer, Dept. of CSE, IIUC
+
+  Open this file with Live Server and scroll while explaining each slide.
+  Each block matches one slide of the Class 3 deck.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE-2340 | HTML Element Demo</title>
+</head>
+
+<body>
+
+  <h1>CSE-2340 &mdash; Semantic HTML Demonstration</h1>
+  <p>Scroll down. Every block below matches one slide.</p>
+  <hr>
+
+  <!-- ===== 1. HEADINGS ===== -->
+  <h2>1. Headings</h2>
+  <h1>This is h1 - one per page</h1>
+  <h2>This is h2 - a major section</h2>
+  <h3>This is h3 - inside an h2</h3>
+  <h4>This is h4</h4>
+  <h5>This is h5</h5>
+  <h6>This is h6 - the smallest</h6>
+  <hr>
+
+  <!-- ===== 2. TEXT ELEMENTS ===== -->
+  <h2>2. Text elements</h2>
+  <p>This is a normal paragraph of text.</p>
+  <p>This word is <strong>important</strong> and this word has <em>emphasis</em>.</p>
+  <p>First line<br>Second line after a br</p>
+  <p>Below this paragraph there is an hr.</p>
+  <hr>
+
+  <!-- ===== 3. LINKS ===== -->
+  <h2>3. Links</h2>
+  <p><a href="https://www.iiuc.ac.bd">External link: IIUC website</a></p>
+  <p><a href="week1-class3-index.html">Internal link: open the profile page</a></p>
+  <p><a href="#forms-demo">Anchor link: jump to the form section below</a></p>
+  <p><a href="broken-file.html">A broken link (open it and show the 404)</a></p>
+  <hr>
+
+  <!-- ===== 4. IMAGES ===== -->
+  <h2>4. Images</h2>
+  <p>Correct image (needs images/profile.jpg to exist):</p>
+  <img src="images/profile.jpg" alt="Portrait photo of a student" width="180">
+
+  <p>Broken path on purpose - notice that the alt text is shown instead:</p>
+  <img src="images/this-file-does-not-exist.jpg" alt="This alt text appears because the file is missing" width="180">
+  <hr>
+
+  <!-- ===== 5. LISTS ===== -->
+  <h2>5. Lists</h2>
+  <h3>Unordered list (order does not matter)</h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Java</li>
+  </ul>
+
+  <h3>Ordered list (order matters)</h3>
+  <ol>
+    <li>Open VS Code</li>
+    <li>Create index.html</li>
+    <li>Run Live Server</li>
+  </ol>
+
+  <h3>A navigation menu is just a list of links</h3>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <hr>
+
+  <!-- ===== 6. FORMS ===== -->
+  <h2 id="forms-demo">6. Forms</h2>
+  <form>
+    <p>
+      <label for="demo-name">Text input</label><br>
+      <input type="text" id="demo-name" name="demo-name" placeholder="Type your name">
+    </p>
+    <p>
+      <label for="demo-email">Email input</label><br>
+      <input type="email" id="demo-email" name="demo-email" placeholder="you@example.com">
+    </p>
+    <p>
+      <label for="demo-pass">Password input</label><br>
+      <input type="password" id="demo-pass" name="demo-pass">
+    </p>
+    <p>
+      <label for="demo-age">Number input</label><br>
+      <input type="number" id="demo-age" name="demo-age" min="16" max="60">
+    </p>
+    <p>
+      <label for="demo-date">Date input</label><br>
+      <input type="date" id="demo-date" name="demo-date">
+    </p>
+    <p>
+      <input type="checkbox" id="demo-check" name="demo-check">
+      <label for="demo-check">Checkbox - click the TEXT to see the box tick</label>
+    </p>
+    <p>
+      <label for="demo-msg">Textarea</label><br>
+      <textarea id="demo-msg" name="demo-msg" rows="3" cols="40"></textarea>
+    </p>
+    <p>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </p>
+  </form>
+  <hr>
+
+  <!-- ===== 7. SEMANTIC vs NON-SEMANTIC ===== -->
+  <h2>7. Same output, different meaning</h2>
+
+  <!-- non-semantic version -->
+  <div>
+    <div>Non-semantic block written with div only</div>
+  </div>
+
+  <!-- semantic version -->
+  <section>
+    <p>Semantic block written with section and p</p>
+  </section>
+
+  <p>
+    Open DevTools (F12) and compare the two. They look the same on screen,
+    but only the second one tells the browser what the content means.
+  </p>
+
+</body>
+
+</html>
